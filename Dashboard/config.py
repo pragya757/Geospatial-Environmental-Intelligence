@@ -13,10 +13,12 @@ FIRE_PROJECT_DIR = PROJECT_ROOT / "Fire_Project"
 BURN_SEV_DIR = FIRE_PROJECT_DIR / "Burn_Severity_Analysis"
 ECO_VULN_DIR = FIRE_PROJECT_DIR / "Ecological_Vulnerability_Analysis"
 MSAVI_DIR = DASHBOARD_DIR / "data" / "msavi"
+CLOUD_ASSETS_DIR = DASHBOARD_DIR / "data" / "cloud_assets"
 CACHE_DIR = DASHBOARD_DIR / "cache"
 
 # Ensure directories exist
 MSAVI_DIR.mkdir(parents=True, exist_ok=True)
+CLOUD_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 # Study Area Metadata

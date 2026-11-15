@@ -62,25 +62,26 @@ def create_folium_raster_map(
     # Load downsampled raster for quick rendering
     data, bounds = load_downsampled_raster(raster_path, max_dim=700)
     
-    # Convert array to RGBA PNG image
-    rgba_img = array_to_rgba_image(data, cmap_name=cmap_name, vmin=vmin, vmax=vmax)
-    buffered = io.BytesIO()
-    rgba_img.save(buffered, format="PNG")
-    img_b64 = base64.b64encode(buffered.getvalue()).decode()
-    img_url = f"data:image/png;base64,{img_b64}"
+    # Convert array to RGBA PNG image only if valid data exists
+    if data is not None and np.isfinite(data).any():
+        rgba_img = array_to_rgba_image(data, cmap_name=cmap_name, vmin=vmin, vmax=vmax)
+        buffered = io.BytesIO()
+        rgba_img.save(buffered, format="PNG")
+        img_b64 = base64.b64encode(buffered.getvalue()).decode()
+        img_url = f"data:image/png;base64,{img_b64}"
 
-    # Bounding box for Folium: [[south, west], [north, east]]
-    folium_bounds = [[bounds[0], bounds[1]], [bounds[2], bounds[3]]]
+        # Bounding box for Folium: [[south, west], [north, east]]
+        folium_bounds = [[bounds[0], bounds[1]], [bounds[2], bounds[3]]]
 
-    # Add image overlay
-    folium.raster_layers.ImageOverlay(
-        image=img_url,
-        bounds=folium_bounds,
-        opacity=opacity,
-        name=title,
-        interactive=True,
-        cross_origin=False
-    ).add_to(m)
+        # Add image overlay
+        folium.raster_layers.ImageOverlay(
+            image=img_url,
+            bounds=folium_bounds,
+            opacity=opacity,
+            name=title,
+            interactive=True,
+            cross_origin=False
+        ).add_to(m)
 
     # Add Study Area Boundary if requested
     if overlay_boundary:
@@ -122,21 +123,22 @@ def create_folium_rgb_map(
     )
 
     rgb, bounds = load_s2_composite(s2_path, composite_type=composite_name, max_dim=750)
-    img = Image.fromarray(rgb)
-    buffered = io.BytesIO()
-    img.save(buffered, format="PNG")
-    img_b64 = base64.b64encode(buffered.getvalue()).decode()
-    img_url = f"data:image/png;base64,{img_b64}"
+    if rgb is not None and rgb.shape[0] > 10 and rgb.shape[1] > 10:
+        img = Image.fromarray(rgb)
+        buffered = io.BytesIO()
+        img.save(buffered, format="PNG")
+        img_b64 = base64.b64encode(buffered.getvalue()).decode()
+        img_url = f"data:image/png;base64,{img_b64}"
 
-    folium_bounds = [[bounds[0], bounds[1]], [bounds[2], bounds[3]]]
+        folium_bounds = [[bounds[0], bounds[1]], [bounds[2], bounds[3]]]
 
-    folium.raster_layers.ImageOverlay(
-        image=img_url,
-        bounds=folium_bounds,
-        opacity=opacity,
-        name=f"Sentinel-2: {composite_name}",
-        interactive=True
-    ).add_to(m)
+        folium.raster_layers.ImageOverlay(
+            image=img_url,
+            bounds=folium_bounds,
+            opacity=opacity,
+            name=f"Sentinel-2: {composite_name}",
+            interactive=True
+        ).add_to(m)
 
     if overlay_boundary:
         boundary_data = get_study_boundary_geojson()

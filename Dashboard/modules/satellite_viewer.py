@@ -69,9 +69,10 @@ def render():
             st_folium(folium_map, width=750, height=520)
 
         with col_meta:
+            clean_phase = phase.replace("-", "")
             st.markdown("### Raster Metadata")
             st.markdown(f"""
-            - **File Name**: `{meta.get('filename', 'S2_DuringFire.tif')}`
+            - **File Name**: `{meta.get('filename', f'S2_{clean_phase}.tif')}`
             - **Dimensions**: {meta.get('width', 7793):,} × {meta.get('height', 7798):,} px
             - **Total Pixels**: ~60.77 Million
             - **Spectral Bands**: {meta.get('count', 4)}

@@ -1,0 +1,558 @@
+{
+  "S2": {
+    "Pre-Fire": {
+      "filename": "S2_PreFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 4,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 520.1
+    },
+    "During-Fire": {
+      "filename": "S2_DuringFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 4,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 543.77
+    },
+    "Post-Fire": {
+      "filename": "S2_PostFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 4,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 551.05
+    }
+  },
+  "indices": {
+    "NDVI_Pre-Fire": {
+      "filename": "NDVI_PreFire.tif",
+      "width": 7793,
+      "height": 7794,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880475,
+        85.89996173947465,
+        22.10008312532323,
+        86.600018840389
+      ],
+      "file_size_mb": 231.74,
+      "npz_file": "NDVI_Pre-Fire.npz"
+    },
+    "NDVI_During-Fire": {
+      "filename": "NDVI_DuringFire.tif",
+      "width": 7793,
+      "height": 7794,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880475,
+        85.89996173947465,
+        22.10008312532323,
+        86.600018840389
+      ],
+      "file_size_mb": 231.74,
+      "npz_file": "NDVI_During-Fire.npz"
+    },
+    "NDVI_Post-Fire": {
+      "filename": "NDVI_PostFire.tif",
+      "width": 7793,
+      "height": 7794,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880475,
+        85.89996173947465,
+        22.10008312532323,
+        86.600018840389
+      ],
+      "file_size_mb": 231.74,
+      "npz_file": "NDVI_Post-Fire.npz"
+    },
+    "NDVI_dNDVI_During": {
+      "filename": "dNDVI_During.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "NDVI_dNDVI_During.npz"
+    },
+    "NDVI_dNDVI_Post": {
+      "filename": "dNDVI_Post.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "NDVI_dNDVI_Post.npz"
+    },
+    "NDVI_Modeled_dNDVI": {
+      "filename": "Modeled_dNDVI.tif",
+      "width": 7793,
+      "height": 7794,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880475,
+        85.89996173947465,
+        22.10008312532323,
+        86.600018840389
+      ],
+      "file_size_mb": 231.74,
+      "npz_file": "NDVI_Modeled_dNDVI.npz"
+    },
+    "NDVI_Percent_dNDVI": {
+      "filename": "Percent_dNDVI_During.tif",
+      "width": 7793,
+      "height": 7794,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880475,
+        85.89996173947465,
+        22.10008312532323,
+        86.600018840389
+      ],
+      "file_size_mb": 231.74,
+      "npz_file": "NDVI_Percent_dNDVI.npz"
+    },
+    "EVI_Pre-Fire": {
+      "filename": "EVI_PreFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "EVI_Pre-Fire.npz"
+    },
+    "EVI_During-Fire": {
+      "filename": "EVI_DuringFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "EVI_During-Fire.npz"
+    },
+    "EVI_Post-Fire": {
+      "filename": "EVI_PostFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "EVI_Post-Fire.npz"
+    },
+    "NDMI_Pre-Fire": {
+      "filename": "NDMI_PreFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "NDMI_Pre-Fire.npz"
+    },
+    "NDMI_During-Fire": {
+      "filename": "NDMI_DuringFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "NDMI_During-Fire.npz"
+    },
+    "NDMI_Post-Fire": {
+      "filename": "NDMI_PostFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "NDMI_Post-Fire.npz"
+    },
+    "BRI_Pre-Fire": {
+      "filename": "BRI_Pre-Fire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "BRI_Pre-Fire.npz"
+    },
+    "BRI_During-Fire": {
+      "filename": "BRI_During-Fire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "BRI_During-Fire.npz"
+    },
+    "BRI_Post-Fire": {
+      "filename": "BRI_Post-Fire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "BRI_Post-Fire.npz"
+    },
+    "BRI_dBRI_During": {
+      "filename": "dBRI_During.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "BRI_dBRI_During.npz"
+    },
+    "BRI_dBRI_Post": {
+      "filename": "dBRI_Post.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "BRI_dBRI_Post.npz"
+    },
+    "BRI_Impact_Classification": {
+      "filename": "BRI_Impact_Classification.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 58.0,
+      "npz_file": "BRI_Impact_Classification.npz"
+    },
+    "LST_Pre-Fire": {
+      "filename": "LST_PreFire_Relative.tif",
+      "width": 2599,
+      "height": 2599,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.39975652982365,
+        85.89978207641784,
+        22.100172956851644,
+        86.60019850344582
+      ],
+      "file_size_mb": 25.78,
+      "npz_file": "LST_Pre-Fire.npz"
+    },
+    "LST_During-Fire": {
+      "filename": "LST_DuringFire_Relative.tif",
+      "width": 2599,
+      "height": 2599,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.39975652982365,
+        85.89978207641784,
+        22.100172956851644,
+        86.60019850344582
+      ],
+      "file_size_mb": 25.78,
+      "npz_file": "LST_During-Fire.npz"
+    },
+    "LST_Post-Fire": {
+      "filename": "LST_PostFire_Relative.tif",
+      "width": 2599,
+      "height": 2599,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.39975652982365,
+        85.89978207641784,
+        22.100172956851644,
+        86.60019850344582
+      ],
+      "file_size_mb": 25.78,
+      "npz_file": "LST_Post-Fire.npz"
+    },
+    "LST_dLST_During": {
+      "filename": "dLST_During.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "LST_dLST_During.npz"
+    },
+    "LST_dLST_Post": {
+      "filename": "dLST_Post.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 231.86,
+      "npz_file": "LST_dLST_Post.npz"
+    },
+    "EVS_EVS_Score": {
+      "filename": "Ecological_Vulnerability_Score.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 154.02,
+      "npz_file": "EVS_EVS_Score.npz"
+    },
+    "EVS_Restoration_Priority": {
+      "filename": "Restoration_Priority_Classification.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 4.85,
+      "npz_file": "EVS_Restoration_Priority.npz"
+    },
+    "EVS_Veg_Degradation": {
+      "filename": "Vegetation_Degradation_Score.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 62.37,
+      "npz_file": "EVS_Veg_Degradation.npz"
+    },
+    "EVS_Moisture_Degradation": {
+      "filename": "Moisture_Degradation_Score.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 118.19,
+      "npz_file": "EVS_Moisture_Degradation.npz"
+    },
+    "EVS_Thermal_Stress": {
+      "filename": "Relative_Thermal_Stress_Score.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 134.42,
+      "npz_file": "EVS_Thermal_Stress.npz"
+    },
+    "MSAVI_Pre-Fire": {
+      "filename": "MSAVI_PreFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 236.07,
+      "npz_file": "MSAVI_Pre-Fire.npz"
+    },
+    "MSAVI_During-Fire": {
+      "filename": "MSAVI_DuringFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 236.25,
+      "npz_file": "MSAVI_During-Fire.npz"
+    },
+    "MSAVI_Post-Fire": {
+      "filename": "MSAVI_PostFire.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 237.5,
+      "npz_file": "MSAVI_Post-Fire.npz"
+    },
+    "MSAVI_dMSAVI_During": {
+      "filename": "dMSAVI_During.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 237.04,
+      "npz_file": "MSAVI_dMSAVI_During.npz"
+    },
+    "MSAVI_dMSAVI_Post": {
+      "filename": "dMSAVI_Post.tif",
+      "width": 7793,
+      "height": 7798,
+      "count": 1,
+      "crs": "EPSG:4326",
+      "bounds": [
+        21.399936192880478,
+        85.89996173947465,
+        22.10044245143688,
+        86.600018840389
+      ],
+      "file_size_mb": 240.57,
+      "npz_file": "MSAVI_dMSAVI_Post.npz"
+    }
+  }
+}
