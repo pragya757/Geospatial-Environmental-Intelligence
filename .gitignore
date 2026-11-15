@@ -1,0 +1,27 @@
+# Large satellite rasters & archives (> 100MB exceeds GitHub hard limit)
+*.tif
+*.tiff
+*.zip
+*.aux.xml
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Dashboard cache
+Dashboard/cache/
+Dashboard/data/msavi/*.tif
+
+# Operating System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+~$*.docx

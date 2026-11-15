@@ -1,0 +1,55 @@
+File Name,Type,Folder,Full Path,Size (MB),Width,Height,Bands,CRS,Data Type
+cloud_mask_result.png,.png,.,/Users/pragya/Documents/Similipal_Project/cloud_mask_result.png,7.47,4439,1533,,,
+dBRI_During.tif,.tif,.,/Users/pragya/Documents/Similipal_Project/dBRI_During.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+dBRI_Post.tif,.tif,.,/Users/pragya/Documents/Similipal_Project/dBRI_Post.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+dLST_During.tif,.tif,.,/Users/pragya/Documents/Similipal_Project/dLST_During.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+dLST_Post.tif,.tif,.,/Users/pragya/Documents/Similipal_Project/dLST_Post.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+dNDVI_During.tif,.tif,.,/Users/pragya/Documents/Similipal_Project/dNDVI_During.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+dNDVI_Post.tif,.tif,.,/Users/pragya/Documents/Similipal_Project/dNDVI_Post.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+diffrences.png,.png,.,/Users/pragya/Documents/Similipal_Project/diffrences.png,0.22,1660,984,,,
+lst2.png,.png,.,/Users/pragya/Documents/Similipal_Project/lst2.png,0.26,512,482,,,
+newarchitecturedia.jpeg,.jpeg,.,/Users/pragya/Documents/Similipal_Project/newarchitecturedia.jpeg,0.09,1167,997,,,
+BRI_During-Fire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/BRI_During-Fire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+BRI_Post-Fire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/BRI_Post-Fire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+BRI_Pre-Fire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/BRI_Pre-Fire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+EVI_Change_Detection.png,.png,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/EVI_Change_Detection.png,15.18,3975,1866,,,
+EVI_DuringFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/EVI_DuringFire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+EVI_PostFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/EVI_PostFire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+EVI_PreFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/EVI_PreFire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+LST_DuringFire_2025.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/LST_DuringFire_2025.tif,16.3,2599,2600,1.0,EPSG:4326,"('float64',)"
+LST_DuringFire_Relative.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/LST_DuringFire_Relative.tif,25.78,2599,2599,1.0,EPSG:4326,"('float32',)"
+LST_PostFire_2025.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/LST_PostFire_2025.tif,10.73,2599,2600,1.0,EPSG:4326,"('float64',)"
+LST_PostFire_Relative.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/LST_PostFire_Relative.tif,25.78,2599,2599,1.0,EPSG:4326,"('float32',)"
+LST_PreFire_2025.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/LST_PreFire_2025.tif,16.58,2599,2600,1.0,EPSG:4326,"('float64',)"
+LST_PreFire_Relative.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/LST_PreFire_Relative.tif,25.78,2599,2599,1.0,EPSG:4326,"('float32',)"
+Modeled_dNDVI.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/Modeled_dNDVI.tif,231.74,7793,7794,1.0,EPSG:4326,"('float32',)"
+NDMI_During-Fire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDMI_During-Fire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+NDMI_DuringFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDMI_DuringFire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+NDMI_Post-Fire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDMI_Post-Fire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+NDMI_PostFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDMI_PostFire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+NDMI_Pre-Fire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDMI_Pre-Fire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+NDMI_PreFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDMI_PreFire.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+NDVI_DuringFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDVI_DuringFire.tif,231.74,7793,7794,1.0,EPSG:4326,"('float32',)"
+NDVI_EVI_Final_Comparison.png,.png,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDVI_EVI_Final_Comparison.png,9.54,3594,3516,,,
+NDVI_PostFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDVI_PostFire.tif,231.74,7793,7794,1.0,EPSG:4326,"('float32',)"
+NDVI_PreFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/NDVI_PreFire.tif,231.74,7793,7794,1.0,EPSG:4326,"('float32',)"
+Percent_dNDVI_During.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/Percent_dNDVI_During.tif,231.74,7793,7794,1.0,EPSG:4326,"('float32',)"
+S2_DuringFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/S2_DuringFire.tif,543.77,7793,7798,4.0,EPSG:4326,"('float64', 'float64', 'float64', 'float64')"
+S2_PostFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/S2_PostFire.tif,551.05,7793,7798,4.0,EPSG:4326,"('float64', 'float64', 'float64', 'float64')"
+S2_PreFire.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/S2_PreFire.tif,520.1,7793,7798,4.0,EPSG:4326,"('float64', 'float64', 'float64', 'float64')"
+dNDVI_During.tif,.tif,Fire_Project,/Users/pragya/Documents/Similipal_Project/Fire_Project/dNDVI_During.tif,231.74,7793,7794,1.0,EPSG:4326,"('float32',)"
+BRI_Impact_Area_Statistics.png,.png,Fire_Project/Burn_Severity_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Burn_Severity_Analysis/BRI_Impact_Area_Statistics.png,0.17,3300,1800,,,
+BRI_Impact_Classification.tif,.tif,Fire_Project/Burn_Severity_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Burn_Severity_Analysis/BRI_Impact_Classification.tif,58.0,7793,7798,1.0,EPSG:4326,"('uint8',)"
+BRI_Impact_Maps.png,.png,Fire_Project/Burn_Severity_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Burn_Severity_Analysis/BRI_Impact_Maps.png,22.02,5913,2029,,,
+dBRI_During.tif,.tif,Fire_Project/Burn_Severity_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Burn_Severity_Analysis/dBRI_During.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+dBRI_Post.tif,.tif,Fire_Project/Burn_Severity_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Burn_Severity_Analysis/dBRI_Post.tif,231.86,7793,7798,1.0,EPSG:4326,"('float32',)"
+Ecological_Vulnerability_Restoration_Priority.png,.png,Fire_Project/Ecological_Vulnerability_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Ecological_Vulnerability_Analysis/Ecological_Vulnerability_Restoration_Priority.png,8.37,4397,1860,,,
+Ecological_Vulnerability_Score.tif,.tif,Fire_Project/Ecological_Vulnerability_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Ecological_Vulnerability_Analysis/Ecological_Vulnerability_Score.tif,154.02,7793,7798,1.0,EPSG:4326,"('float32',)"
+Moisture_Degradation_Score.tif,.tif,Fire_Project/Ecological_Vulnerability_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Ecological_Vulnerability_Analysis/Moisture_Degradation_Score.tif,118.19,7793,7798,1.0,EPSG:4326,"('float32',)"
+Relative_Thermal_Stress_Score.tif,.tif,Fire_Project/Ecological_Vulnerability_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Ecological_Vulnerability_Analysis/Relative_Thermal_Stress_Score.tif,134.42,7793,7798,1.0,EPSG:4326,"('float32',)"
+Restoration_Priority_Classification.tif,.tif,Fire_Project/Ecological_Vulnerability_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Ecological_Vulnerability_Analysis/Restoration_Priority_Classification.tif,4.85,7793,7798,1.0,EPSG:4326,"('uint8',)"
+Vegetation_Degradation_Score.tif,.tif,Fire_Project/Ecological_Vulnerability_Analysis,/Users/pragya/Documents/Similipal_Project/Fire_Project/Ecological_Vulnerability_Analysis/Vegetation_Degradation_Score.tif,62.37,7793,7798,1.0,EPSG:4326,"('float32',)"
+LST_During-Fire_C.tif,.tif,Fire_Project/New Folder With Items,/Users/pragya/Documents/Similipal_Project/Fire_Project/New Folder With Items/LST_During-Fire_C.tif,25.79,2599,2600,1.0,EPSG:4326,"('float32',)"
+LST_Post-Fire_C.tif,.tif,Fire_Project/New Folder With Items,/Users/pragya/Documents/Similipal_Project/Fire_Project/New Folder With Items/LST_Post-Fire_C.tif,25.79,2599,2600,1.0,EPSG:4326,"('float32',)"
+LST_Pre-Fire_C.tif,.tif,Fire_Project/New Folder With Items,/Users/pragya/Documents/Similipal_Project/Fire_Project/New Folder With Items/LST_Pre-Fire_C.tif,25.79,2599,2600,1.0,EPSG:4326,"('float32',)"
+newarchitecture.jpeg,.jpeg,minor,/Users/pragya/Documents/Similipal_Project/minor/newarchitecture.jpeg,0.09,1079,928,,,

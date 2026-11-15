@@ -1,0 +1,149 @@
+/* Similipal Forest Intelligence - Dark Forest Theme */
+
+:root {
+    --bg-dark: #0D1310;
+    --card-bg: #141C18;
+    --card-border: #23362B;
+    --card-hover: #1E2D25;
+    --forest-green: #27AE60;
+    --emerald: #1B4D3E;
+    --amber: #F39C12;
+    --orange: #E67E22;
+    --crimson: #C0392B;
+    --text-primary: #F0F4F2;
+    --text-secondary: #9EB0A5;
+    --accent-blue: #2980B9;
+}
+
+/* Global Font & Spacing */
+.stApp {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #0A1C14 0%, #133324 50%, #0F281D 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 22px 28px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: #A3C9B4;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.badge-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.badge-item {
+    background: rgba(39, 174, 96, 0.12);
+    border: 1px solid rgba(39, 174, 96, 0.35);
+    color: #2ECC71;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 11px;
+    border-radius: 16px;
+    letter-spacing: 0.3px;
+}
+
+.badge-item.warning {
+    background: rgba(243, 156, 18, 0.12);
+    border-color: rgba(243, 156, 18, 0.35);
+    color: #F39C12;
+}
+
+.badge-item.info {
+    background: rgba(41, 128, 185, 0.12);
+    border-color: rgba(41, 128, 185, 0.35);
+    color: #3498DB;
+}
+
+/* Metric Cards */
+.metric-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.metric-card:hover {
+    border-color: #27AE60;
+}
+
+.metric-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 6px;
+}
+
+.metric-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.metric-sub {
+    font-size: 0.82rem;
+    margin-top: 5px;
+    color: var(--text-secondary);
+}
+
+.delta-neg {
+    color: #E74C3C;
+    font-weight: 600;
+}
+
+.delta-pos {
+    color: #2ECC71;
+    font-weight: 600;
+}
+
+/* Info Alert Callouts */
+.info-callout {
+    background: rgba(27, 77, 62, 0.22);
+    border-left: 4px solid #27AE60;
+    border-radius: 0 6px 6px 0;
+    padding: 13px 16px;
+    margin: 14px 0;
+    color: #CFDFD6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.warning-callout {
+    background: rgba(230, 126, 34, 0.15);
+    border-left: 4px solid #E67E22;
+    border-radius: 0 6px 6px 0;
+    padding: 13px 16px;
+    margin: 14px 0;
+    color: #F8D7DA;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
