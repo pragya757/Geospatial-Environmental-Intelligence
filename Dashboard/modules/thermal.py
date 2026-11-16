@@ -13,19 +13,20 @@ from Dashboard.components.maps import create_folium_raster_map
 from Dashboard.components.metrics_cards import render_metric_card
 
 def render():
-    st.markdown("## Land Surface Temperature (LST) & Relative Thermal Stress")
+    st.markdown("## Relative Land Surface Temperature (LST) & Spatial Thermal Variation")
     st.markdown("""
-    Spatial assessment of surface thermal anomalies and radiative heat dissipation across Similipal Forest.
-    Thermal infrared observations capture vegetation canopy transpiration breakdown and ground heat absorption.
+    Spatial assessment of relative thermal anomalies and spatial thermal variation across Similipal Forest.
+    Thermal infrared observations capture spatial divergence in emitted radiance during active and post-fire observation phases.
     """)
 
     st.markdown("""
     <div class="warning-callout">
         <strong>Data Integrity & Unit Specification Notice:</strong><br>
         The thermal datasets in this research are recorded in <strong>Relative Thermal Units / Digital Numbers (DN)</strong> 
-        derived from MODIS / Landsat thermal sensors clipped to the study boundary. In accordance with rigorous scientific standards, 
-        these values are <strong>not converted to or presented as calibrated degrees Celsius (°C)</strong>, as no atmospheric radio-sounding 
-        profile or in-situ radiometric ground validation was applied during preprocessing. All metrics represent <strong>relative thermal radiation intensity</strong>.
+        derived from thermal sensors clipped to the study boundary. In accordance with rigorous scientific standards, 
+        these values are <strong>strictly distinguished from actual physical kinetic surface temperatures and are not labeled as degrees Celsius (°C)</strong>. 
+        Without atmospheric radio-sounding profiles and in-situ radiometric field validation, all metrics are presented as 
+        <strong>Relative Land Surface Temperature, Relative Thermal Anomalies, and Spatial Thermal Variation</strong>.
     </div>
     """, unsafe_allow_html=True)
 
@@ -113,16 +114,16 @@ def render():
         st_folium(m, width=650, height=460, key="thermal_folium")
 
     with col_details:
-        st.markdown("#### Thermal Stress Interpretation")
+        st.markdown("#### Spatial Thermal Pattern Observations")
         st.markdown("""
-        - **Evaporative Cooling Breakdown**: Canopy combustion abruptly curtailed transpirational cooling, leading to rapid ground surface radiative warming.
-        - **Surface Albedo Alteration**: Deposition of dark charcoal and ash reduced surface reflectance, enabling burned ground to absorb greater solar insolation.
-        - **Spatial Convergence**: The highest relative thermal anomalies coincide with exposed ridges and valley shoulders where flame fronts concentrated.
+        - **Spatial Thermal Divergence**: Positive relative thermal anomalies concentrate in localized sectors where active fire progression was observed.
+        - **Uncalibrated Sensor Proxy**: Values reflect uncalibrated relative thermal proxy measurements from thermal infrared observations rather than confirmed kinetic temperatures or verified physical surface heating mechanisms.
+        - **Post-Fire Radiance Variation**: Residual spatial thermal variation remains observable post-fire, reflecting altered vegetative cover and microclimatic exposure across the study reserve.
         """)
         st.caption(f"Source file: `{raster_path.split('/')[-1]}`")
 
     st.markdown("---")
-    st.markdown("### Distribution of Temperature Change (ΔLST During Fire)")
+    st.markdown("### Distribution of Relative Thermal Change (ΔLST During Fire)")
     st.markdown("""
     The thermal difference distribution shows a positive shift across the reserve during the fire phase, 
     with a standard deviation of 500.42 relative units indicating substantial spatial heterogeneity.

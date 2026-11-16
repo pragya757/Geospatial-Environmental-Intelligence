@@ -53,7 +53,7 @@ def generate_markdown_report() -> str:
     report = f"""# SIMILIPAL FOREST INTELLIGENCE RESEARCH REPORT
 ## Multi-Temporal Forest Fire Detection, Vegetation Change Assessment and Ecological Vulnerability Analysis
 
-### 1. STUDY AREA SPECIFICATION
+### 1. STUDY AREA SPECIFICATION & RESEARCH OBJECTIVES
 - **Target Reserve**: {STUDY_AREA['name']}
 - **Geographic Location**: {STUDY_AREA['location']}
 - **Coordinates (Center)**: {STUDY_AREA['coordinates']['lat']}°N, {STUDY_AREA['coordinates']['lon']}°E
@@ -61,6 +61,11 @@ def generate_markdown_report() -> str:
 - **Total Classified Area (Reserve Boundary)**: 3,485.37 km² (348,536.9 Geodesic Hectares)
 - **Observation Phases**: Pre-Fire (Baseline), During-Fire (Impact), Post-Fire (Response)
 - **Satellite Platforms**: European Space Agency Sentinel-2 MSI (B2, B4, B8, B11) & MODIS/Landsat Thermal
+
+#### Core Research Objectives:
+1. Multi-Temporal Forest Fire Detection and Vegetation Change Assessment (NDVI, EVI, NDMI).
+2. Spatial Ecological Vulnerability and Post-Fire Restoration Priority Assessment (Model-Derived EVS).
+3. Soil-Adjusted Vegetation Condition Assessment Using MSAVI (Soil background decoupling).
 
 ---
 
@@ -74,7 +79,9 @@ def generate_markdown_report() -> str:
    - During-fire shift: 55.80% of valid pixels classified as Decreased, 21.10% No significant change, 23.10% Increased.
    - Post-fire shift: 21.37% of valid pixels classified as Decreased, 12.65% No significant change, 65.97% Increased.
 4. **NDMI (Moisture Content)**: Acute foliar moisture drop of 80.9% (0.0899 to 0.0172), with 66.74% of valid pixels showing moisture decrease during fire.
-5. **Relative LST (Thermal)**: Surface relative thermal radiance increased by a mean of +2,420.59 relative units during active fires.
+5. **Relative LST (Spatial Thermal Variation)**: Surface relative thermal radiance increased by a mean of +2,420.59 relative units during active fires. Recorded in uncalibrated Relative Thermal Units (DN).
+
+*Phenological Note:* Observed post-fire spectral increases represent empirical differences between available satellite acquisition dates, reflecting initial rapid understory green-up, herbaceous sprouting, and rainfall response. They should not be construed as proven climax forest recovery.
 
 ---
 
@@ -84,12 +91,12 @@ Geodesic area calculation on WGS84 ellipsoid (`pyproj.Geod`):
 {df_to_md(priority_df)}
 
 - **High + Very High Priority Zones**: 781.51 km² (22.42% of Similipal Reserve)
-- **Very High Priority Core**: 338.20 km² (9.71%) requiring strategic intervention.
+- **Very High Priority Core**: 338.20 km² (9.71%) recommended for field assessment and prioritized restoration planning.
 
 ---
 
-### 4. BURN IMPACT CLASSIFICATION (BRI)
-*Methodological note: BRI is formulated as (B8 - B11)/(B8 + B11), mathematically identical to NDMI, utilized as a burn disparity metric.*
+### 4. RELATIVE BURN IMPACT CLASSIFICATION (QUANTILE-BASED)
+*Methodological note: BRI is formulated as (B8 - B11)/(B8 + B11), mathematically identical to NDMI. It is utilized as a relative spectral disparity metric rather than an independent physical measurement. Thresholds are empirical quartiles.*
 
 #### A. Within Similipal Reserve Boundary (3,485.37 km²):
 {df_to_md(bri_reserve_df)}

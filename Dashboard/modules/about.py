@@ -18,6 +18,14 @@ def render():
     - **Institution**: Department of Computing Technologies, College of Engineering and Technology, SRM Institute of Science and Technology, Kattankulathur, Tamil Nadu, India
     - **Project Guidance**: Dr. A. Pandiaraj, Assistant Professor
     - **Course Code**: 21CSP302L - Project Work
+
+    #### Core Research Objectives:
+    1. **Multi-Temporal Forest Fire Detection & Vegetation Change Assessment**:  
+       Assessing pre-fire, during-fire, and post-fire canopy chlorophyll greenness (NDVI), structural architecture (EVI), and moisture thickness (NDMI) across 3,485.37 km² of Similipal reserve.
+    2. **Spatial Ecological Vulnerability & Restoration Priority Assessment**:  
+       Synthesizing multi-criteria indicators (EVI vegetation loss, NDMI moisture loss, and relative thermal stress) into an Ecological Vulnerability Score (EVS) with sensitivity analysis to demarcate geodesic restoration priority tiers.
+    3. **Soil-Adjusted Vegetation Condition Assessment Using MSAVI**:  
+       Decoupling exposed mineral soil background effects caused by understory fire consumption through the self-adaptive Modified Soil-Adjusted Vegetation Index (MSAVI).
     """)
 
     st.markdown("---")

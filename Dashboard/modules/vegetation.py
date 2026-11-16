@@ -216,4 +216,12 @@ def render():
             
             *SWIR Band 11 absorption directly correlates with liquid water thickness in leaves, serving as a critical indicator of fuel dryness.*
             """)
+            st.markdown("""
+            <div style="background-color: #17241C; border-left: 3px solid #F39C12; padding: 10px; font-size: 0.82rem; margin-top: 10px; border-radius: 4px;">
+                <strong>Scientific Note on BRI vs NDMI Equivalence:</strong><br>
+                NDMI and BRI share the identical band ratio formula: <code>(B8 - B11) / (B8 + B11)</code>. 
+                In this research, NDMI evaluates vegetative canopy moisture desiccation, whereas the same formula under the designation 'BRI' was used to quantify relative spectral burn disparity. 
+                They represent the same underlying spectral measurement. The Ecological Vulnerability Score (EVS) does <strong>not</strong> count them twice, as it incorporates EVI, NDMI, and LST.
+            </div>
+            """, unsafe_allow_html=True)
             st.caption(f"Source file: `{raster_p.split('/')[-1]}`")

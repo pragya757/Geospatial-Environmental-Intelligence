@@ -79,11 +79,13 @@ def render():
         )
 
         st.markdown("""
-        #### Why an Area Falls into 'Very High Priority':
-        Areas classified as **Very High Restoration Priority (Tier 4)** exhibit multiple combined stress factors:
-        1. **Marked Canopy Loss**: Substantial NDVI decline and extensive exposed scorched ground.
-        2. **Acute Leaf Desiccation**: NDMI moisture degradation $> 0.20$.
-        3. **Elevated Relative Thermal Radiance**: High relative thermal emission with sustained microclimatic heat retention.
+        #### Contributing Factors to 'Very High Priority' (Tier 4):
+        Areas identified as **Very High Priority (338.2 km²)** are recommended for further field assessment and restoration planning based on the convergence of three normalized EVS indicators:
+        1. **Vegetation Degradation ($w_{\\text{veg}} = 0.40$)**: Marked decline in EVI with extensive canopy thinning and exposed soil.
+        2. **Moisture Degradation ($w_{\\text{moist}} = 0.30$)**: Severe foliar and surface moisture desiccation captured by NDMI.
+        3. **Relative Thermal Stress ($w_{\\text{thermal}} = 0.30$)**: Elevated relative thermal emission indicating persistent radiative warming.
+        
+        *Satellite-derived scores indicate relative priority tiers to guide allocation; specific silvicultural actions require on-ground field evaluation.*
         """)
 
     st.markdown("---")

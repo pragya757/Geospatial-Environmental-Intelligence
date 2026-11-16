@@ -16,9 +16,9 @@ from Dashboard.components.metrics_cards import render_metric_card
 from Dashboard.utils.stats_calculator import get_burn_severity_df
 
 def render():
-    st.markdown("## Burn Impact Analysis (Burning Ratio Index - BRI)")
+    st.markdown("## Relative Burn Impact Analysis (Burning Ratio Index - BRI)")
     st.markdown("""
-    Spatial assessment of wildfire burn impact zonation across Similipal Forest.
+    Spatial assessment of relative burn impact zonation across Similipal Forest.
     The research utilizes the **Burning Ratio Index (BRI)** computed from Sentinel-2 Near-Infrared (Band 8) and Short-Wave Infrared (Band 11).
     """)
 
@@ -29,10 +29,12 @@ def render():
         In the research notebook (Cells 31–34), BRI is formulated as:
         $$\\text{BRI} = \\frac{\\text{NIR} - \\text{SWIR}}{\\text{NIR} + \\text{SWIR}} = \\frac{\\text{B8} - \\text{B11}}{\\text{B8} + \\text{B11}}$$
         This is mathematically the same band ratio as the <strong>Normalized Difference Moisture Index (NDMI)</strong> (Gao, 1996). 
-        To maintain research integrity, BRI and NDMI are not presented as two independent spectral measurements. 
-        In this research, this ratio is specifically utilized as a <strong>burn-ratio disparity metric</strong> to capture 
+        To maintain research integrity, BRI and NDMI are not presented as two independent physical indicators. 
+        In this research, this ratio is specifically utilized as a <strong>relative spectral disparity metric</strong> to capture 
         the spectral shift between pre-fire and post-fire canopy states ($\\Delta\\text{BRI} = \\text{BRI}_{\\text{pre}} - \\text{BRI}_{\\text{post}}$) 
-        and partition the landscape into relative impact classes.
+        and partition the landscape into <strong>Relative Impact Classes</strong>.<br>
+        <em>Classification Thresholds:</em> The thresholds (Low: 0.0365, Moderate: 0.0751, High: 0.1229) are <strong>Quantile-Based Classification Thresholds</strong> 
+        derived empirically from the 25th, 50th, and 75th percentiles of positive $\\Delta\\text{BRI}$ values across the study scene. They represent relative statistical quartiles of spectral change rather than independently validated physical field burn-severity categories.
     </div>
     """, unsafe_allow_html=True)
 
@@ -77,13 +79,13 @@ def render():
     col_map, col_table = st.columns([1.5, 1.2])
 
     with col_map:
-        st.markdown("### Burn Impact Classification Map")
-        st.caption("Classified using notebook relative quantile thresholds (Cell 124) on OpenStreetMap basemap.")
+        st.markdown("### Relative Burn Impact Classification Map")
+        st.caption("Classified using notebook quantile-based classification thresholds (Cell 124) on OpenStreetMap basemap.")
         
         map_product = st.selectbox(
             "Select Product to View",
             [
-                "Burn Impact Classification (5 Classes)",
+                "Relative Burn Impact Classification (5 Classes)",
                 "ΔBRI During-Fire (Continuous Difference)",
                 "ΔBRI Post-Fire (Continuous Difference)",
                 "During-Fire BRI",
@@ -95,7 +97,7 @@ def render():
             raster_p = str(RASTER_PATHS["BRI"]["Impact_Classification"])
             cmap = "YlOrRd"
             vmin, vmax = 0, 4
-            title = "Burn Impact Severity Classes"
+            title = "Relative Burn Impact Classes"
         elif "ΔBRI During-Fire" in map_product:
             raster_p = str(RASTER_PATHS["BRI"]["dBRI_During"])
             cmap = "hot"

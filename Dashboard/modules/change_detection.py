@@ -27,8 +27,10 @@ def render():
     <div class="warning-callout">
         <strong>Ecological Nuance & Scientific Interpretation:</strong><br>
         The post-fire observation shows increased vegetation-index values relative to the pre-fire observation across a substantial proportion of valid pixels. 
-        This may reflect vegetation regrowth, seasonal variation, rainfall, and phenological changes. 
-        Long-term recovery of climax forest canopy and structural woody biomass requires additional multi-year observations and ground verification.
+        <strong>This observed increase must not be construed as proven long-term climax forest recovery.</strong> 
+        In tropical deciduous forest systems like Similipal, post-fire spectral greening often reflects rapid seasonal understory flushes, 
+        grass/herbaceous sprouting, pre-monsoon precipitation response, and natural vegetation phenology. 
+        Validating structural canopy restoration of mature woody biomass (*Shorea robusta*, *Terminalia tomentosa*) requires long-term multi-year observations and intensive in-situ forestry validation.
     </div>
     """, unsafe_allow_html=True)
 
@@ -45,7 +47,13 @@ def render():
         with col_ctrl1:
             index_selected = st.selectbox(
                 "Select Index for Change Analysis",
-                ["NDVI (Vegetation Greenness)", "MSAVI (Soil-Adjusted)", "NDMI / BRI (Moisture & Burn Disparity)", "LST (Relative Thermal)"]
+                [
+                    "NDVI (Vegetation Greenness)", 
+                    "MSAVI (Soil-Adjusted)", 
+                    "NDMI (Canopy Moisture)", 
+                    "BRI (Relative Burn Disparity)", 
+                    "LST (Relative Thermal)"
+                ]
             )
         with col_ctrl2:
             time_comparison = st.selectbox(
@@ -71,7 +79,13 @@ def render():
             vmin, vmax = 500, 3500
             unit_label = "ΔLST (Relative Units)"
             mean_val = NOTEBOOK_STATS["LST"]["dLST_During"]["mean"] if "During-Fire" in time_comparison else NOTEBOOK_STATS["LST"]["dLST_Post"]["mean"]
-        else: # NDMI / BRI
+        elif "NDMI" in index_selected:
+            raster_p = str(RASTER_PATHS["BRI"]["dBRI_During"]) if "During-Fire" in time_comparison else str(RASTER_PATHS["BRI"]["dBRI_Post"])
+            cmap = "BrBG"
+            vmin, vmax = -0.15, 0.15
+            unit_label = "ΔNDMI"
+            mean_val = NOTEBOOK_STATS["NDMI"]["dNDMI_During"]["mean"] if "During-Fire" in time_comparison else NOTEBOOK_STATS["NDMI"]["dNDMI_Post"]["mean"]
+        else: # BRI
             raster_p = str(RASTER_PATHS["BRI"]["dBRI_During"]) if "During-Fire" in time_comparison else str(RASTER_PATHS["BRI"]["dBRI_Post"])
             cmap = "hot"
             vmin, vmax = 0.0, 0.2

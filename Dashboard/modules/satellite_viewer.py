@@ -19,8 +19,23 @@ def render():
     st.markdown("""
     Inspect multi-spectral Sentinel-2 Surface Reflectance (SR) observations across the three study phases.
     The source imagery contains four spectral bands:
-    **Band 1 (B2 - Blue)**, **Band 2 (B4 - Red)**, **Band 3 (B8 - NIR)**, and **Band 4 (B11 - SWIR)**.
+    **File Band 1 (B2 - Blue)**, **File Band 2 (B4 - Red)**, **File Band 3 (B8 - NIR)**, and **File Band 4 (B11 - SWIR)**.
     """)
+
+    st.markdown("""
+    <div class="info-callout">
+        <strong>Verified Sentinel-2 Band Order & Reflectance Scaling:</strong><br>
+        • <strong>File Band 1</strong> = Sentinel-2 Band <strong>B2</strong> (Blue, 490 nm)<br>
+        • <strong>File Band 2</strong> = Sentinel-2 Band <strong>B4</strong> (Red, 665 nm)<br>
+        • <strong>File Band 3</strong> = Sentinel-2 Band <strong>B8</strong> (Near-Infrared / NIR, 842 nm)<br>
+        • <strong>File Band 4</strong> = Sentinel-2 Band <strong>B11</strong> (Short-Wave Infrared / SWIR-1, 1610 nm)<br>
+        <em>Reconciliation note:</em> In the research notebook (e.g. MSAVI in Cell 141 and band extraction in Cell 50), 
+        <code>src.read(2)</code> extracts Red (B4) and <code>src.read(3)</code> extracts NIR (B8). 
+        The file band index 2 corresponds to Sentinel-2 B4 (Red), not the native B2 blue band.<br>
+        <em>Reflectance Scaling:</em> Source values are stored as scaled integers (values 1,000–6,700) and are scaled by dividing by <code>10,000.0</code> 
+        to obtain true dimensionless surface reflectance ([0.0, 1.0]).
+    </div>
+    """, unsafe_allow_html=True)
 
     # Controls
     ctrl_col1, ctrl_col2, ctrl_col3 = st.columns([1.2, 1.2, 1.0])

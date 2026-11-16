@@ -28,13 +28,15 @@ def render():
 
     st.markdown("""
     <div class="info-callout">
-        <strong>Research Overview:</strong> This geospatial intelligence platform evaluates the Similipal Biosphere Reserve 
-        across three defined observation phases: <strong>Pre-Fire</strong> (baseline undisturbed canopy), 
-        <strong>During-Fire</strong> (active burn impact and canopy scorch), and 
-        <strong>Post-Fire</strong> (immediate landscape response and seasonal flushes). 
-        The research integrates multi-spectral Sentinel-2 surface reflectance, vegetation and moisture indices (NDVI, EVI, MSAVI, NDMI), 
-        burn severity (BRI), and relative land surface temperature (LST) into a multi-criteria 
-        <strong>Ecological Vulnerability Score (EVS)</strong> and <strong>Restoration Priority Classification</strong>.
+        <strong>Research Overview & Core Objectives:</strong><br>
+        This geospatial research dashboard presents satellite-based earth observations over the Similipal Biosphere Reserve, Odisha, India. 
+        The project is structured around three primary scientific research objectives:
+        <ol style="margin-top: 6px; margin-bottom: 6px; padding-left: 20px;">
+            <li><strong>Multi-Temporal Forest Fire Detection & Vegetation Change Assessment:</strong> Quantifying canopy greenness, structure, and moisture shifts across Pre-Fire, During-Fire, and Post-Fire phases using Sentinel-2 MSI (NDVI, EVI, NDMI).</li>
+            <li><strong>Spatial Ecological Vulnerability & Post-Fire Restoration Priority Assessment:</strong> Synthesizing normalized vegetation loss, foliar moisture deficit, and relative thermal stress into a model-derived Ecological Vulnerability Score (EVS) to establish geodesic restoration priority zones.</li>
+            <li><strong>Soil-Adjusted Vegetation Condition Assessment Using MSAVI:</strong> Decoupling exposed scorched soil background interference using the self-adaptive Modified Soil-Adjusted Vegetation Index (MSAVI).</li>
+        </ol>
+        <em>Note:</em> This platform is an interactive satellite-based multi-temporal analysis system based on available observations, not an automated real-time wildfire alert dispatch system.
     </div>
     """, unsafe_allow_html=True)
 
