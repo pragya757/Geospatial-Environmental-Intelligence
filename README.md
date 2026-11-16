@@ -2,44 +2,55 @@
 
 ## Multi-Temporal Forest Fire Detection, Vegetation Change Assessment and Ecological Vulnerability Analysis Using Satellite Imagery – A Case Study of Similipal Forest, Odisha, India
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://geospatial-environmental-intelligence-kp2wpv6bf7ofpmjrofkrs6.streamlit.app/)
+
 ---
 
 ## 🌲 Project Overview
 
 This repository contains the complete academic research codebase and interactive geospatial dashboard for environmental intelligence monitoring in the **Similipal Biosphere Reserve, Odisha, India**. 
 
-The system analyzes multi-temporal satellite earth observations across three observation phases:
+The system analyzes multi-temporal satellite earth observations across three defined observation phases:
 1. **Pre-Fire Phase**: Baseline healthy forest canopy condition.
 2. **During-Fire Phase**: Active wildfire progression, canopy scorch, and moisture desiccation.
-3. **Post-Fire Phase**: Immediate aftermath, understory regrowth, and phenological response.
+3. **Post-Fire Phase**: Immediate aftermath, seasonal understory flush, and phenological response.
+
+### 🎯 Core Research Objectives
+1. **Multi-Temporal Forest Fire Detection & Vegetation Change Assessment**: Quantitative monitoring of chlorophyll greenness (NDVI), canopy architecture (EVI), and foliar water thickness (NDMI) across 3,485.37 km² of Similipal reserve.
+2. **Spatial Ecological Vulnerability & Restoration Priority Assessment**: Synthesis of normalized vegetation degradation, moisture loss, and relative thermal stress into a model-derived Ecological Vulnerability Score (EVS) with geodesic restoration priority zonation.
+3. **Soil-Adjusted Vegetation Condition Assessment Using MSAVI**: Decoupling exposed mineral soil background effects caused by understory fire consumption using the self-adaptive Modified Soil-Adjusted Vegetation Index (MSAVI).
 
 ---
 
 ## 🛰️ Key Scientific Features
 
-- **Multi-Sensor Earth Observation**: Calibrated European Space Agency **Sentinel-2 MSI** (Bands 2, 4, 8, 11) surface reflectance and **MODIS/Landsat-8** thermal infrared observations.
+- **Multi-Sensor Earth Observation**:
+  - Calibrated **Sentinel-2 MSI** surface reflectance (File Band 1: B2-Blue, File Band 2: B4-Red, File Band 3: B8-NIR, File Band 4: B11-SWIR; scaled by 10,000).
+  - Thermal infrared observations clipped to the reserve boundary.
 - **Biophysical Vegetation & Moisture Indices**:
   - **NDVI** (Chlorophyll Greenness): Mean relative drop of -6.07% during fire ($0.3515 \to 0.3230$).
-  - **EVI** (Canopy Architecture): Reduced aerosol distortion using the blue band ($0.3695 \to 0.3281$).
-  - **MSAVI** (Soil-Adjusted): Dynamic soil adjustment over incinerated exposed soil; 55.80% of valid pixels experienced decrease during fire.
-  - **NDMI** (Canopy Moisture Content): Acute foliar moisture drop of 80.9% ($0.0899 \to 0.0172$); 66.74% of the reserve experienced moisture depletion.
+  - **EVI** (Canopy Architecture): Aerosol-corrected using the blue band ($0.3695 \to 0.3281$).
+  - **MSAVI** (Soil-Adjusted): Dynamic self-adjusting soil compensation; 55.80% of valid pixels classified as Decreased during fire ($0.2457 \to 0.2302$).
+  - **NDMI** (Canopy Moisture Content): Acute foliar moisture drop of 80.9% ($0.0899 \to 0.0172$); 66.74% of valid pixels exhibited moisture depletion.
+- **Spectral Equivalence of BRI & NDMI**:
+  - Both calculate $\frac{B8 - B11}{B8 + B11}$. NDMI tracks foliar canopy moisture, while BRI serves as a relative spectral burn disparity metric.
+  - The composite EVS does **not** double-count them, integrating EVI, NDMI, and LST.
+- **Relative Land Surface Temperature (LST)**:
+  - Recorded in uncalibrated **Relative Thermal Units** (DN), mapping spatial thermal variation and relative anomalies ($\Delta\text{LST}$ mean: +2,420.59 relative units).
 - **Coupled Fire Impact Modeling**:
-  - Multi-variable linear regression equation:
-    $$\Delta\text{NDVI} = -0.0032 + (0.6898) \times \Delta\text{BRI} + (0.0000) \times \Delta\text{LST}$$
-  - $R^2 = 0.3206$, Correlation with observed canopy loss $r = 0.582$ ($p < 0.0001$).
-  - Statistically validates that **Fire Severity (BRI, $r = 0.702$)** is the primary driver of canopy loss over surface thermal anomalies ($r = -0.052$).
-- **Thermal Radiative Analysis**:
-  - Relative Land Surface Temperature (LST in Relative Thermal Units) mapping active radiative warming ($\Delta\text{LST}$ mean: +2,420.59 relative units).
-- **Burn Severity Classification (BRI)**:
-  - 5-class zonation based on Near-Infrared and Short-Wave Infrared disparity.
-- **Multi-Criteria Ecological Vulnerability Scoring (EVS)**:
-  - Synthesis of Vegetation Degradation (0.40), Moisture Degradation (0.30), and Relative Thermal Stress (0.30) with 5-regime sensitivity testing.
+  - Regression equation: $\Delta\text{NDVI} = -0.0032 + (0.6898) \times \Delta\text{BRI} + (0.0000) \times \Delta\text{LST}$ ($R^2 = 0.3206, r = 0.582, p < 0.0001$).
+  - Validates that Fire Severity (BRI, $r = 0.702$) is the primary driver of canopy loss over surface thermal anomalies ($r = -0.052$).
+- **Relative Burn Impact Classification**:
+  - 5-class zonation based on empirical quantile thresholds (25th, 50th, 75th percentiles of positive $\Delta\text{BRI}$).
+- **Model-Derived Ecological Vulnerability Scoring (EVS)**:
+  - Weighted synthesis of Vegetation Degradation (0.40, from EVI), Moisture Degradation (0.30, from NDMI), and Relative Thermal Stress (0.30, from LST).
 - **Geodesic Restoration Prioritization**:
-  - Exact ellipsoidal area calculations on WGS84 (`pyproj.Geod`) over the 3,485.37 km² reserve:
-    - **Low Priority**: 1,638.29 km² (47.00%)
-    - **Moderate Priority**: 1,065.57 km² (30.57%)
-    - **High Priority**: 443.31 km² (12.72%)
-    - **Very High Priority**: 338.20 km² (9.71%)
+  - Ellipsoidal area calculations on WGS84 (`pyproj.Geod`) over the 3,485.37 km² reserve:
+    - **Low Priority**: 1,638.293 km² (47.00%)
+    - **Moderate Priority**: 1,065.567 km² (30.57%)
+    - **High Priority**: 443.313 km² (12.72%)
+    - **Very High Priority**: 338.196 km² (9.71%)
+    - **Total Classified Area**: 3,485.369 km²
 
 ---
 
